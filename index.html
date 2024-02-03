@@ -22,13 +22,13 @@ body {
     overflow-y: auto;
 }
 .container {
-    position: relative; /* Ensure container is a positioned parent */
     max-width: 90%;
-    padding: 5vw; /* Adjust padding using viewport width */
+    padding: 30px;
+    margin-top: 70px;
     background-color: #111111;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 7px;
-    overflow: hidden; /* Ensure content doesn't overflow */
+    height: 1050px; /* Adjusted height to auto */
 }
 @media only screen and (max-width: 768px) {
     .container {
@@ -217,12 +217,11 @@ transform: translateY(100vh);
 <body>
 
 <div class="container">
-<center>
-<img src="paypal.png">
-</center>
-<h1>Payment Details<br>Miami Services</h1>
+
 <div class="instructions">
     <div class="step">
+        <img src="paypal.png"><br>
+        <h1>Payment Details<br>Miami Services</h1>
         <span class="step-title">Step 1:</span>
         <p class="paypal-email">Send payment to:</p>
         <div class="email-field" id="emailField">plotascuka@gmail.com <span class="copy-sign" id="copySign"><img src="copy.png" alt="Copy Email"></span></div>
