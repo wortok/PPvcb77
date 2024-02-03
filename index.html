@@ -22,13 +22,13 @@ body {
     overflow-y: auto;
 }
 .container {
+    position: relative; /* Ensure container is a positioned parent */
     max-width: 90%;
-    padding: 30px;
-    margin-top: 70px;
+    padding: 5vw; /* Adjust padding using viewport width */
     background-color: #111111;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 7px;
-    height: 1000px; /* Adjusted height to auto */
+    overflow: hidden; /* Ensure content doesn't overflow */
 }
 @media only screen and (max-width: 768px) {
     .container {
