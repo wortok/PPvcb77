@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="pp-fav.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira&display=swap">
+    <title>PayPal Checkout</title>
+    <style>
+
+body {
+    font-family: 'Saira', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+.container {
+    max-width: 90%;
+    padding: 30px;
+    margin-top: 10px;
+    background-color: #111111;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 7px;
+    height: 1080px; /* Adjusted height to auto */
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+}
+h1 {
+    margin-bottom: 20px;
+}
+.instructions {
+    background-color: #1b1b1b;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.step {
+    margin-bottom: 20px;
+}
+.step-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+.send-as-friends {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.friends-text {
+    font-size: 16px;
+}
+
+.email-field {
+    position: relative;
+    display: inline-block;
+    background-color: #141414;
+    border-radius: 20px;
+    padding: 10px 50px;
+    margin: 5px auto;
+    max-width: 350px;
+    text-align: center;
+    font-size: 21px;
+    border: 3px solid #0099ff;
+    justify-content: center;
+    display: flex;
+}
+
+.email-field1 {
+    position: relative;
+    display: inline-block;
+    background-color: #141414;
+    border-radius: 20px;
+    padding: 10px 55px;
+    margin: 5px auto;
+    max-width: 350px;
+    text-align: center;
+    font-size: 21px;
+    border: 3px solid #0099ff;
+    justify-content: center;
+    display: flex;
+}
+
+.email-field2 {
+    position: relative;
+    display: inline-block;
+    background-color: #00aeff27;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 5px auto;
+    max-width: 350px;
+    text-align: center;
+    font-size: 12px;
+    border: 3px solid #0099ff;
+    color: #0099ff;
+}
+
+.fnf {
+    font-size: 20px;
+}
+
+.email-field {
+padding-right: 60px; /* Adjust this value as needed */
+}
+
+/* Adjusted position for the copy image */
+.copy-sign {
+position: absolute;
+right: 20px; /* Adjusted position */
+top: 50%;
+transform: translateY(-50%);
+cursor: pointer;
+width: 30px; /* Set the width of the image */
+height: 30px; /* Set the height of the image */
+}
+
+.order-number {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.snowflakes {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+pointer-events: none;
+}
+
+.snowflake {
+position: absolute;
+width: 10px;
+height: 10px;
+background-color: #fff;
+border-radius: 50%;
+animation: snowfall linear infinite;
+}
+
+/* Adjust the position of snowflakes */
+.snowflake:nth-child(1) {
+left: 5%;
+animation-duration: 10s;
+}
+
+.snowflake:nth-child(2) {
+left: 15%;
+animation-duration: 8s;
+}
+
+.snowflake:nth-child(3) {
+left: 25%;
+animation-duration: 9s;
+}
+
+.snowflake:nth-child(4) {
+left: 35%;
+animation-duration: 11s;
+}
+
+.snowflake:nth-child(5) {
+left: 45%;
+animation-duration: 12s;
+}
+
+.snowflake:nth-child(6) {
+left: 55%;
+animation-duration: 9s;
+}
+
+.snowflake:nth-child(7) {
+left: 65%;
+animation-duration: 11s;
+}
+
+.snowflake:nth-child(8) {
+left: 75%;
+animation-duration: 10s;
+}
+
+.snowflake:nth-child(9) {
+left: 85%;
+animation-duration: 8s;
+}
+
+.snowflake:nth-child(10) {
+left: 95%;
+animation-duration: 12s;
+}
+
+@keyframes snowfall {
+0% {
+transform: translateY(-100%);
+}
+100% {
+transform: translateY(100vh);
+}
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="instructions">
+    <div class="step">
+        <img src="paypal.png"><br>
+        <h1>Payment Details<br>Miami Services</h1>
+        <span class="step-title">Step 1:</span>
+        <p class="paypal-email">Send payment to:</p>
+        <div class="email-field" id="emailField"><span class="copy-sign" id="copySign"><img src="copy.png" alt="Copy Email"></span></div>
+    </div>
+    <center>
+    <p class="email-field2"><span class="fnf">SEND AS FRIENDS & FAMILY !</span><br>
+    If PayPal does not support Friends & Family in your country, do not send the payment. Please contact us to send us the payment directly.</p>
+</center>
+    <div class="step">
+        <span class="step-title">Step 2:</span>
+        <p>Type in the order # number in transaction information.</p>
+        <p class="email-field">#<span id="orderNumber"></span></p>
+    <div class="step">
+        <span class="step-title">Step 3:</span>
+        <p>Send the following amount:</p>
+        <p class="email-field1">100.00 €</p>
+    </div>
+        <p class="send-as-friends">Send as "Friends and Family"</p>
+</div>
+<h2>Order Summary</h2>
+<p>1x 400€</p>
+<!-- Include your order summary here -->
+<!-- You can include a form for user information and confirmation -->
+</div>
+
+<script>
+// JavaScript generating random order number
+document.getElementById('orderNumber').innerText = generateOrderNumber();
+
+// JavaScript displaying timer
+var timerDisplay = document.getElementById('timer');
+var timeLeft = 1800; // 30 minutes in seconds
+
+setInterval(function() {
+    var minutes = Math.floor(timeLeft / 60);
+    var seconds = timeLeft % 60;
+    timerDisplay.textContent = minutes + 'm ' + seconds + 's';
+    timeLeft--;
+
+    if (timeLeft < 0) {
+        clearInterval();
+        timerDisplay.textContent = 'Time expired';
+        // You might want to handle the expiration event here
+    }
+}, 1000);
+
+function generateOrderNumber() {
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    var orderNumber = '';
+    for (var i = 0; i < 6; i++) {
+        orderNumber += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return orderNumber;
+}
+</script>
+    <script src="script.js"></script>
+
+<script>
+const copySign = document.getElementById('copySign');
+const emailField = document.getElementById('emailField');
+
+copySign.addEventListener('click', () => {
+const emailText = emailField.innerText.trim();
+navigator.clipboard.writeText(emailText);
+alert('Email copied to clipboard: ' + emailText);
+});
+</script>
+
+<div class="snowflakes" aria-hidden="true">
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+<div class="snowflake"></div>
+</div>
+</body>
+</html>
