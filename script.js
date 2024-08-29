@@ -2,7 +2,7 @@ window.onload = function() {
     // Create a list of email addresses
     var emails = [
         "ppbarps@gmail.com",
-        "globalwhite11@gmail.com",
+        "ppbarps@gmail.com",
         "globalwhite11@gmail.com",
         "globalwhite11@gmail.com"
     ];
