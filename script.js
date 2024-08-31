@@ -3,8 +3,8 @@ window.onload = function() {
     var emails = [
         "ppbarps@gmail.com",
         "ppbarps@gmail.com",
-        "globalwhite11@gmail.com",
-        "globalwhite11@gmail.com"
+        "ppbarps@gmail.com",
+        "ppbarps@gmail.com"
     ];
 
     // Generate a random index
